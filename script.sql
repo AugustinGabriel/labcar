@@ -1,20 +1,19 @@
 CREATE DATABASE labcar;
 
-
 CREATE TABLE usuario (
-                         id bigserial PRIMARY KEY,
-                         nome varchar(255) NOT NULL,
-                         email varchar(255) NOT NULL,
-                         senha varchar(255) NOT NULL
+    id    bigserial PRIMARY KEY,
+    nome  varchar(255) NOT NULL,
+    email varchar(255) NOT NULL,
+    senha varchar(255) NOT NULL
 );
 
 CREATE TABLE carro (
-                       id bigserial PRIMARY KEY,
-                       marca varchar(100) NOT NULL,
-                       modelo varchar(100) NOT NULL,
-                       ano int NOT NULL,
-                       preco numeric(19, 2),
-                       foto text
+    id     bigserial PRIMARY KEY,
+    marca  varchar(100) NOT NULL,
+    modelo varchar(100) NOT NULL,
+    ano    int          NOT NULL,
+    preco  numeric(19, 2),
+    foto   text
 );
 
 /*
@@ -22,10 +21,10 @@ CREATE TABLE carro (
 {
   "usuarios": [
     {
+      "id": 1
       "nome": "Usuário Teste",
       "email": "teste@teste.com",
       "senha": "abcd1234",
-      "id": 1
     }
   ],
   "carros": [
